@@ -8,7 +8,10 @@
  * @problem.severity error
  * @precision very-high
  */
- 
+
 import java
 
-select "System.out.println"
+from Call c, Method m
+where m = c.getCallee() and
+    m.hasName("println")
+select c,"System.out.println are bad for performance, please aviod"
