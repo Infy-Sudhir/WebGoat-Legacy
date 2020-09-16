@@ -1,5 +1,5 @@
 name: "Custom CodeQL config"
-disable-default-queries: true
+disable-default-queries: false
 queries: 
   - name: Run custom queries
     uses: ./queries/sysoutcheck.ql
